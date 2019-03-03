@@ -1,0 +1,14 @@
+.ion-content {
+  background-image: url("/fondo2.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.img {
+    opacity: 0.9;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.logo {
+
+}

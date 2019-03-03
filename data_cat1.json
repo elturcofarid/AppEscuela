@@ -1,0 +1,35 @@
+[
+{
+  "nombre":"Oscar Farid Ureche Cantillo",
+  "fecha_nacimiento": "Septiembre 17 de 2011",
+  "lugar_nacimiento" : "Bogotá - Colombia",
+  "debut": "Minuto Futbol Club -  2016",
+  "posicion" : "Arquero",
+  "foto" : "//realcarvajalfc.com/wp-content/uploads/2018/08/cat1_oscar.jpg"
+},
+{
+  "nombre":"Valeri Domiguez",
+  "fecha_nacimiento": "Diciembre de 2009",
+  "lugar_nacimiento" : "Bogotá - Colombia",
+  "debut": " -- ",
+  "posicion" : "Arquera",
+  "foto" : "//realcarvajalfc.com/wp-content/uploads/2018/08/cat1_valeri.jpg"
+},
+{
+  "nombre":"Josep Santiago Bernal Delgadillo",
+  "fecha_nacimiento": "Marzo 11 de 2013",
+  "lugar_nacimiento" : "Bogotá - Colombia",
+  "debut": " Amarillo pequeños ",
+  "posicion" : " ---- ",
+  "foto" : "//realcarvajalfc.com/wp-content/uploads/2018/08/cat1_josep.jpg"
+}
+,
+{
+  "nombre":"Angel",
+  "fecha_nacimiento": "Agosto de 2010",
+  "lugar_nacimiento" : "Bogotá - Colombia",
+  "debut": " -- ",
+  "posicion" : "Delantero",
+  "foto" : "//realcarvajalfc.com/wp-content/uploads/2018/08/cat1_angel.jpg"
+}
+]

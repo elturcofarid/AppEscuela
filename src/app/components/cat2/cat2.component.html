@@ -1,0 +1,28 @@
+<div class="card mb-3">
+  <img class="card-img-top" src="//realcarvajalfc.com/wp-content/uploads/2018/07/IMG_20180729_101528-1140x380.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Categoria 2010 - 2009 </h5>
+    <p class="texto">Esta categoria ....................</p>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-2 card" *ngFor="let jugador of integrantes">
+    <!--img class="card-img-top" src="//realcarvajalfc.com/wp-content/uploads/2018/08/cat1_oscar.jpg" alt="Card image cap"-->
+    <img class="card-img-top" src={{jugador.foto}} alt="Card image cap" width="60" height="260">
+    <div class="card-block">
+      <h6 class="card-title">{{jugador.nombre}}</h6>
+         <li  >{{jugador.fecha_nacimiento}}</li>
+         <li >{{jugador.lugar_nacimiento}}</li>
+         <li >{{jugador.debut}}</li>
+         <li >{{jugador.posicion}}</li>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Video Promocional</small>
+    </div>
+  </div>
+
+</div>
+
+  <app-footer></app-footer>

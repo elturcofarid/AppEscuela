@@ -1,0 +1,237 @@
+
+<div class="container">
+<h6>  Información del Alumno </h6>
+
+  <div class="from-group">
+    <button [routerLink]="['/Modulo_Administrativo']"
+    class="btn btn-outline-danger"  >
+       Regresar
+     </button>
+
+    <button (click)="agregarNuevo(forma)"
+    class="btn btn-outline-success"  >
+       Nuevo Alumno
+     </button>
+  </div>
+
+  <hr>
+
+
+<div class="row animated fadeIn fast">
+ <div class="col-md-4 " >
+
+<form [formGroup]="forma" (ngSubmit)="guardar(forma)" novalidate="novalidate">
+
+
+  {{forma.valid}}
+    <div class="form-group" [ngClass]= "{'has-danger' : !forma.get('nombre').valid}">
+      <label >Nombres </label>
+      <input
+      [(ngModel)]="nombre"
+      class="form-control"
+      type="text"
+      placeholder="Nombres"
+      formControlName="nombre">
+
+      <div *ngIf="forma.get('nombre').errors?.required"
+            class="form-control-feedback">
+        El nombre es obligatorio.
+      </div>
+
+      
+      <div *ngIf="forma.get('nombre').errors?.minLength"
+            class="form-control-feedback">
+        Por lo menos 3 caracteres.
+      </div>
+
+    </div>
+
+ 
+
+    <div class="form-group">
+        <label >Apellidos </label>
+        <input
+        [(ngModel)]="apellidos"
+        class="form-control"
+        placeholder="Apellidos"
+        formControlName="apellidos"  >
+
+
+         <div *ngIf="forma.get('apellidos').errors?.required"
+            class="form-control-feedback">
+        Los Apellidos son obligatorios.
+      </div>
+
+      
+      <div *ngIf="forma.get('apellidos').errors?.minLength"
+            class="form-control-feedback">
+        Por lo menos 3 caracteres.
+      </div>
+
+
+        
+      </div>
+
+   
+
+      <div class="form-group">
+        <label >Email </label>
+        <input
+        class="form-control"
+        [(ngModel)]="email"
+        placeholder="Email"
+        formControlName="email">
+
+           <div *ngIf="forma.get('email').errors?.required"
+            class="form-control-feedback">
+            Obligatorio.
+         </div>
+
+      </div>
+
+        
+      <div class="form-group">
+        <label >Teléfono </label>
+        <input
+        [(ngModel)]="telefono"
+        class="form-control"
+        placeholder="Teléfono principal"
+        formControlName="telefono">
+
+          <div *ngIf="forma.get('telefono').errors?.required"
+            class="form-control-feedback">
+            Obligatorio.
+         </div>
+
+      </div>
+
+      <div class="form-group">
+        <label >Teléfono Secundario</label>
+        <input
+        [(ngModel)]="telefono2"
+        formControlName="telefono2"
+        class="form-control"
+        placeholder="Teléfono secundario">
+      </div>
+
+      <div class="form-group">
+        <label >Fecha Nacimiento </label>
+        <input
+        [(ngModel)]="fecha_nac"
+        formControlName="nacimiento"
+        class="form-control"
+        placeholder="Fecha Nacimiento (dd/mm/aaaa)">
+
+
+        <div *ngIf="forma.get('nacimiento').errors?.required"
+            class="form-control-feedback">
+            Obligatorio.
+         </div>
+      </div>
+ 
+
+      <div class="form-group">
+        <label >Posición en la que juega</label>
+        <select [(ngModel)]="posicion"
+        formControlName="posicion"
+        class="form-control">
+          <option value=""> Seleccione una posición </option>
+          <option *ngFor="let item of posiciones"
+          [value]="item.nombre">{{item.nombre}}</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label >Asignar Categoria</label>
+        <select
+        [(ngModel)]="categoria"
+        formControlName="categoria"
+        class="form-control">
+          <option value="">Asigne una categoria </option>
+          <option *ngFor="let item of categorias"
+          [value]="item.nombre">{{item.nombre}}</option>
+        </select>
+      </div>
+
+
+    <!-- Inforacion de los padres ---->
+
+<hr>
+Información del Padre
+  <hr>
+  <br>
+    <div class="form-group">
+      <label >Nombre Padre</label>
+      <input
+      [(ngModel)]="nombre_padre"
+      formControlName="nombre_padre"
+      class="form-control"
+      placeholder="Nombre Padre">
+    </div>
+
+    <div class="form-group">
+      <label >Teléfono Padre</label>
+      <input
+      [(ngModel)]="telefono_padre"
+      formControlName="telefono_padre"
+      class="form-control"
+      placeholder="Teléfono Padre">
+    </div>
+
+    <div class="form-group">
+      <label >Email Padre</label>
+      <input
+      [(ngModel)]="email_padre"
+      formControlName="email_padre"
+      class="form-control"
+      placeholder="Email Padre">
+    </div>
+
+    <hr>
+    Información de la Madre
+    <hr>
+    <br>
+    <div class="form-group">
+      <label >Nombre Madre</label>
+      <input
+      [(ngModel)]="nombre_madre"
+      formControlName="nombre_madre"
+      class="form-control"
+      placeholder="Nombre Madre">
+    </div>
+
+    <div class="form-group">
+      <label >Teléfono madre</label>
+      <input
+      [(ngModel)]="telefono_madre"
+      formControlName="telefono_madre"
+      class="form-control"
+      placeholder="Teléfono Madre">
+    </div>
+
+    <div class="form-group">
+      <label >Email madre</label>
+      <input
+      [(ngModel)]="email_madre"
+      formControlName="email_madre"
+      class="form-control"
+      placeholder="Email Madre">
+    </div>
+ 
+    <div class="from-group">
+      <button *ngIf="forma.valid"
+        type="submit"        
+        class="btn btn-outline-primary"  >
+         Guardar
+       </button>
+    </div>
+</form>
+</div>
+</div>
+</div>
+
+
+<p></p>
+
+<app-footer></app-footer>

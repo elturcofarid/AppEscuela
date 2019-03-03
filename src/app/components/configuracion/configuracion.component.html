@@ -1,0 +1,64 @@
+<h6> Configuración general aplicación. <h6>
+
+  <hr>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <button [routerLink]="['/personalizacion','nuevo']" class="btn btn-outline-primary"
+         type="button" name="button">
+         Nueva configuración
+       </button>
+
+<!--
+       <button [routerLink]="['/directivo','nuevo']" class="btn btn-outline-primary"
+          type="button" name="button">
+          Nuevo Administrativo
+        </button>
+    </div>
+    </div>
+    -->
+    <br>
+
+<hr>
+  <div class="row animated fadeIn fast" >
+    <div class="col-md-12">
+      <div class="table-table-responsive-sm">
+
+
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Valor</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--
+            <tr *ngFor= "let k of jugadores | keys; let i = index">
+              <th scope="row">{{i + 1}}</th>
+              <td>{{jugadores[k].nombre}}</td>
+              <td>{{jugadores[k].apellidos}}</td>
+              <td>{{jugadores[k].fecha_nac}}</td>
+              <td>{{jugadores[k].categoria}}</td>
+              <td><button [routerLink]="['/jugador',k]"
+                type="button"
+              class="btn btn-outline-success"  >
+                 Editar
+               </button>
+               </td>
+
+            </tr>
+          -->
+         </tbody>
+            </table>
+
+        </div>
+        </div>
+        </div>
+
+
+        <app-footer></app-footer>
