@@ -74,7 +74,7 @@ forma:FormGroup;
           
                       this._usuariosService.getJugador(this.id).subscribe( res => {             
                         this._jugador = res;    
-                        console.log('recibiendo datos del id ' ,this._jugador )          
+                        console.log('recibiendo datos del id ' ,this._jugador )           
                       //  this.imprimir(this._jugador, 'recibiendo datos');
                       })
                     }else{
