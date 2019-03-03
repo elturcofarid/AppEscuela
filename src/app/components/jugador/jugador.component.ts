@@ -54,7 +54,7 @@ categorias = [{
 ];
 
 nuevo :boolean = false;
-id:string;
+id:string; 
 num : number = 0;
 
 
