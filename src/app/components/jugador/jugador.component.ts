@@ -150,7 +150,7 @@ console.log("nombre", forma);
               this.router.navigate(['/jugador', data.name])
                 console.log(this._jugador);
          }, error => console.log(error))
-          
+           
     }else{
       //Actualizar
       console.log('Actualice');
